@@ -9,6 +9,6 @@ package negocio;
  *
  * @author Christoph
  */
-public class Facede {
+public class Facade {
     
 }

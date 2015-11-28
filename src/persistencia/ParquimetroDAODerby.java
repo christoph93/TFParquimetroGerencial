@@ -5,10 +5,28 @@
  */
 package persistencia;
 
+import negocio.Parquimetro;
+
 /**
  *
  * @author Christoph
  */
 public class ParquimetroDAODerby implements ParquimetroDAO{
+
+    @Override
+    public Parquimetro getParquimetro(String codigoParquimetro) {
+        //buscar no banco de dados pelo codigo
+        return null;
+    }
+
+    @Override
+    public Parquimetro getParquimetro() {
+        return null;
+    }
+
+    @Override
+    public void addParquimetro(Parquimetro parquimetro) {
+        //mapeia parquimetro para o banco
+    }
     
 }

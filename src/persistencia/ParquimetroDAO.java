@@ -5,10 +5,20 @@
  */
 package persistencia;
 
+import negocio.Parquimetro;
+
 /**
  *
  * @author Christoph
  */
 public interface ParquimetroDAO {
+    
+    
+    public Parquimetro getParquimetro(String codigoParquimetro);
+    
+    public Parquimetro getParquimetro();
+    
+    public void addParquimetro(Parquimetro parquimetro);
+    
     
 }

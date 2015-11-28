@@ -109,7 +109,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="btEstat">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Gerar estat&#xed;sticas de total de valor arrecadado, total de valor isento, filtrados por n&#xfa;mero do parqu&#xed;metro(***)"/>
+        <Property name="text" type="java.lang.String" value="Gerar estat&#xed;sticas de total de valor arrecadado, total de valor isento, filtrados por n&#xfa;mero do parqu&#xed;metro(**)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btGraficoEstatBar">
@@ -134,12 +134,12 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Dia (*)"/>
+        <Property name="text" type="java.lang.String" value="Dia In&#xed;cio (*)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="M&#xea;s (*)"/>
+        <Property name="text" type="java.lang.String" value="Dia Fim (*)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField2">

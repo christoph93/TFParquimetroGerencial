@@ -13,19 +13,19 @@ public class Facade {
 
     }
     
-    public void gerarRelatorio(){
+    public void gerarRelatorio(String s){
         
     }
     
-    public void gerarEstatPorParq(){
+    public void gerarEstatPorParq(String s){
         
     }
     
-    public JFreeChart gerarGraficoBarras(){
+    public JFreeChart gerarGraficoBarras(String init, String fim){
         return null;
     }
     
-    public JFreeChart gerarGraficoPizza(){
+    public JFreeChart gerarGraficoPizza(String init, String fim){
         return null;
     }
 }

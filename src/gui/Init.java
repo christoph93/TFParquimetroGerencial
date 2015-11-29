@@ -19,6 +19,8 @@ public class Init {
         c.associaView(v);
 
         m.associaController(c);
+        
+        c.setUpViewEvents();
 
         v.setVisible(true);
     }

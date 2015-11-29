@@ -5,6 +5,7 @@
  */
 package persistencia;
 
+import java.util.List;
 import negocio.Parquimetro;
 
 /**
@@ -16,7 +17,7 @@ public interface ParquimetroDAO {
     
     public Parquimetro getParquimetro(String codigoParquimetro);
     
-    public Parquimetro getParquimetro();
+    public List<Parquimetro> getParquimetro();
     
     public void addParquimetro(Parquimetro parquimetro);
     

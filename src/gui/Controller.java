@@ -5,10 +5,29 @@
  */
 package gui;
 
-/**
- *
- * @author Christoph
- */
+import java.awt.event.ActionListener;
+
 public class Controller {
-    
+
+    private Model model;
+    private View view;
+    private ActionListener incrementa;
+
+    public void associaModel(Model m) {
+        model = m;
+    }
+
+    public void associaView(View v) {
+        view = v;
+    }
+
+    public void setUpViewEvents() {
+//        incrementa = (ActionEvent actionEvent) -> {
+//            System.out.println("Teste incrementa!");
+//            String[] aux = model.incrementaTempo();
+//            view.getTempo().setText(aux[0]);
+//            view.getValor().setText(aux[1]);
+//        };
+//        view.getIncrementa().addActionListener(incrementa);
+    }
 }

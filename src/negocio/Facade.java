@@ -5,10 +5,25 @@
  */
 package negocio;
 
-/**
- *
- * @author Christoph
- */
 public class Facade {
+
+    public void importarLog() {
+
+    }
     
+    public void gerarRelatorio(){
+        
+    }
+    
+    public void gerarEstatPorParq(){
+        
+    }
+    
+    public void gerarGraficoBarras(){
+        
+    }
+    
+    public void gerarGraficoPizza(){
+        
+    }
 }

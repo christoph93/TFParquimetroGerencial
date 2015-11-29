@@ -5,10 +5,22 @@
  */
 package gui;
 
-/**
- *
- * @author Christoph
- */
+import negocio.Facade;
+
 public class Model {
-    
+
+    private Controller c;
+    private Facade f;
+
+    public Model() {
+        f = new Facade();
+    }
+
+    public Facade getFacade() {
+        return f;
+    }
+
+    void associaController(Controller c) {
+        this.c = c;
+    }
 }

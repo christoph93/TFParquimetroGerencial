@@ -5,6 +5,7 @@
  */
 package negocio;
 
+import java.math.BigDecimal;
 import java.time.*;
 import java.util.ArrayList;
 
@@ -22,9 +23,9 @@ public class Parquimetro {
     private Duration tempoMin;
     private Duration tempoMax;
     private Duration incremento;
-    private double valorIncremento;
+    private BigDecimal valorIncremento;
 
-    public Parquimetro(Endereco e, int cod, LocalTime hIni, LocalTime hFim, Duration tMin, Duration tMax, Duration incr, double vIncr, ArrayList<Moeda> moedas) {
+    public Parquimetro(Endereco e, int cod, LocalTime hIni, LocalTime hFim, Duration tMin, Duration tMax, Duration incr, BigDecimal vIncr, ArrayList<Moeda> moedas) {
 
         this.codigo = cod; //fazer geração do código
         this.ender = e;
@@ -121,11 +122,11 @@ public class Parquimetro {
         this.incremento = incremento;
     }
 
-    public double getValorIncremento() {
+    public BigDecimal getValorIncremento() {
         return valorIncremento;
     }
 
-    public void setValorIncremento(double valorIncremento) {
+    public void setValorIncremento(BigDecimal valorIncremento) {
         this.valorIncremento = valorIncremento;
     }
 

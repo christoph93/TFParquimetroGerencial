@@ -8,6 +8,7 @@ package persistencia;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.sql.SQLException;
 import java.sql.Time;
 import java.time.Duration;
@@ -56,7 +57,7 @@ public class ParquimetroDAOXML implements ParquimetroDAO {
         LocalTime hInicio, hFinal;
         Duration tMin, tMax, tIncr;
         int numero, codigo;
-        double vIncr;
+        BigDecimal vIncr;
         ArrayList<Moeda> moedas;
 
         Element parquimetro = parq.getChild("parquimetro");
@@ -74,7 +75,7 @@ public class ParquimetroDAOXML implements ParquimetroDAO {
         tMin = Duration.parse(parquimetro.getChild("tempoMin").getText());
         tMax = Duration.parse(parquimetro.getChild("tempoMax").getText());
         tIncr = Duration.parse(parquimetro.getChild("incremento").getText());
-        vIncr = Double.parseDouble(parquimetro.getChild("valorIncremento").getText());
+        vIncr = new BigDecimal(parquimetro.getChild("valorIncremento").getText());
 
         moedas = new ArrayList<>();
 

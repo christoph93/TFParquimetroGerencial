@@ -5,6 +5,8 @@
  */
 package negocio;
 
+import org.jfree.chart.JFreeChart;
+
 public class Facade {
 
     public void importarLog() {
@@ -19,11 +21,11 @@ public class Facade {
         
     }
     
-    public void gerarGraficoBarras(){
-        
+    public JFreeChart gerarGraficoBarras(){
+        return null;
     }
     
-    public void gerarGraficoPizza(){
-        
+    public JFreeChart gerarGraficoPizza(){
+        return null;
     }
 }

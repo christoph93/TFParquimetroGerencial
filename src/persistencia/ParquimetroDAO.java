@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package persistencia;
 
 import java.util.List;
@@ -10,14 +5,16 @@ import negocio.Parquimetro;
 
 /**
  *
- * @author Christoph
+ * @authors Christoph Califice, Lucas Caltabiano
  */
 public interface ParquimetroDAO {
     
     
-    public Parquimetro getParquimetro(String codigoParquimetro);
+    public Parquimetro getParquimetro(String codigoParquimetro) throws ParquimetroDAOException;
     
-    public List<Parquimetro> getParquimetro();
+    public Parquimetro getParquimetro() throws ParquimetroDAOException;
+    
+    public List<Parquimetro> getParquimetros() throws ParquimetroDAOException;
     
     public void addParquimetro(Parquimetro parquimetro);
     

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package persistencia;
 
 import java.io.File;
@@ -30,7 +25,7 @@ import org.jdom2.output.XMLOutputter;
 
 /**
  *
- * @author lcaltab
+ * @authors Christoph Califice, Lucas Caltabiano
  */
 public class ParquimetroDAOXML implements ParquimetroDAO {
 
@@ -237,6 +232,11 @@ public class ParquimetroDAOXML implements ParquimetroDAO {
         } catch (IOException ex) {
             Logger.getLogger(ParquimetroDAOXML.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    @Override
+    public List<Parquimetro> getParquimetros() throws ParquimetroDAOException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

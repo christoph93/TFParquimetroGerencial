@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package negocio;
 
 import java.io.IOException;
@@ -11,6 +6,7 @@ import java.sql.SQLException;
 import java.time.Duration;
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.UUID;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.jdom2.JDOMException;
@@ -23,7 +19,7 @@ import persistencia.ticketDAOException;
 
 /**
  *
- * @author Christoph
+ * @authors Christoph Califice, Lucas Caltabiano
  */
 public class Processamento {
     
@@ -56,6 +52,16 @@ public class Processamento {
             daoTD.adicionar(t);
         }        
     }
+    
+    public String geraCodigoCartao(){
+     String cod = "";
+        
+        for (int i = 0; i <=3; i++){
+            cod += UUID.randomUUID().toString().replaceAll("-", "");
+        }        
+        return cod;
+    }
+    
     
     //Endereco e, int cod, LocalTime hIni, LocalTime hFim, Duration tMin, Duration tMax, Duration incr, double vIncr, ArrayList<Moeda> moedas
     public void criaParquimetro(Endereco ende, LocalTime hIni,LocalTime hFim, Duration tMin, Duration tMax, Duration incr, BigDecimal vIncr, ArrayList<Moeda> moedas ){

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package persistencia;
 
 import java.sql.Connection;
@@ -14,7 +9,7 @@ import negocio.Parquimetro;
 
 /**
  *
- * @author Christoph
+ * @authors Christoph Califice, Lucas Caltabiano
  */
 public class ParquimetroDAODerby implements ParquimetroDAO{
 
@@ -25,18 +20,18 @@ public class ParquimetroDAODerby implements ParquimetroDAO{
     }
 
     @Override
-    public List<Parquimetro> getParquimetro() throws ParquimetroDAOException {
+    public List<Parquimetro> getParquimetros() throws ParquimetroDAOException {
         List<Parquimetro> parq = new ArrayList<>();
         String sql = "select * from parquimetro";
         try (Connection conexao = InicializadorBancoDeDados.conectarBd()) {
             try (Statement comando = conexao.createStatement()) {
                 try (ResultSet resultado = comando.executeQuery(sql)) {
                     while (resultado.next()) {
-                        Parquimetro p = new Parquimetro(
-                                resultado.getString("endereco"),
-                                resultado.getString("primeironome"),
-                                resultado.getString("ultimonome"));
-                        parq.add(p);
+//                        Parquimetro p = new Parquimetro(
+//                                resultado.getString("endereco"),
+//                                resultado.getString("primeironome"),
+//                                resultado.getString("ultimonome"));
+//                        parq.add(p);
                     }
                     return parq;
                 }
@@ -45,12 +40,17 @@ public class ParquimetroDAODerby implements ParquimetroDAO{
             throw new ParquimetroDAOException("Falha na busca", e);
         }
         
-//        Parquimetro(Endereco e, int cod, LocalTime hIni, LocalTime hFim, Duration tMin, Duration tMax, Duration incr, BigDecimal vIncr, ArrayList<Moeda> moedas)
+
     }
 
     @Override
     public void addParquimetro(Parquimetro parquimetro) {
         //mapeia parquimetro para o banco
+    }
+
+    @Override
+    public Parquimetro getParquimetro() throws ParquimetroDAOException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
